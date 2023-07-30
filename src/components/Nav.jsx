@@ -22,7 +22,7 @@ function Nav() {
     </div>
     <a className="btn btn-ghost normal-case text-xl">Healthy living</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  {/* <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabIndex={0}>
@@ -36,7 +36,7 @@ function Nav() {
       </li>
       <li><a>Item 3</a></li>
     </ul>
-  </div>
+  </div> */}
   <div className="navbar-end">
     <a className="btn">Download</a>
   </div>

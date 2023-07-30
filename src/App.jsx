@@ -5,6 +5,7 @@ import MainSection from './components/MainSection'
 import Nav from './components/Nav'
 import jdata from './data.json'
 import { useTable } from 'react-table'
+import html2pdf from 'html2pdf.js';
 
 function App() {
   
@@ -31,11 +32,35 @@ function App() {
  
  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
         useTable({ columns, data });
+
+        // for download
+      
+          const handleDownloadAsPDF = () => {
+            // Replace 'your_pdf_file_name.pdf' with the desired file name for the downloaded PDF
+            const fileName = 'your_pdf_file_name.pdf';
+        
+            // Replace 'rootElement' with the ID or class name of the element you want to convert to PDF
+            const element = document.getElementById('rootElement');
+        
+            // Create the configuration object for html2pdf
+            const config = {
+              margin: 10,
+              filename: fileName,
+              image: { type: 'jpeg', quality: 0.98 },
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            };
+        
+            // Perform the conversion and download
+            html2pdf().from(element).set(config).save();
+          };
+
   return (
     <>
       <Nav/>
       {/* <MainSection/> */}
-      <div className='container'>
+      <button onClick={handleDownloadAsPDF}>Download as PDF</button>
+      <div id="rootElement">
         <table {...getTableProps()}>
           <thead>
               {headerGroups.map((headerGroup) => (

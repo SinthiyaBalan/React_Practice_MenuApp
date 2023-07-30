@@ -1,3 +1,7 @@
 [{"day":"Monday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
 {"day":"Tuesday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
-{"day":"Wednesday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"}]
+{"day":"Wednesday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
+{"day":"Thursday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
+{"day":"Friday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
+{"day":"Saturday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"},
+{"day":"Sunday","breakfast":"Oats","lunch":"Rice","dinner":"Fruits"}]
